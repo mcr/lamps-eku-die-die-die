@@ -1,12 +1,11 @@
-# ANIMA operational considerations for BRSKI Registrar
+# a replacement for Extended Key Usage
 
-The ANIMA WG Bootstrapping Remote Secure Key Infrastructure (BRSKI)
-protocol involves three parties: Pledge (device), Registrar and
-Manufacturer Authorized Signing Authority (MASA).
+PKIX certificates have had "Extended Key Usage" extensions since before RFC5280.
+They are mis-understood and mis-used.
 
-This repository contains operational considerations for the Registrar
-function.  It is a candidate document for the ANIMA WG
-http://datatracker.ietf.org/wg/anima 
+This document makes the current EKU extension historic, replacing it with two new extensions: one for certification authorities (giving permission), and a second one for end-entity certificates giving authorization.
+
+
 
 
 

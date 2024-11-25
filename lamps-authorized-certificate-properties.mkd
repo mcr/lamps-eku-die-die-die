@@ -1,7 +1,7 @@
 ---
-title: Operational Considerations for Manufacturer Authorized Signing Authority
-abbrev: MASA Considerations
-docname: draft-richardson-anima-masa-considerations-00
+title: On Replacing Extended Key Usage extensions
+abbrev: EKU DIE
+docname: draft-richardson-lamps-authorized-certificate-properties-00
 
 # stand_alone: true
 
@@ -10,6 +10,7 @@ area: Internet
 wg: anima Working Group
 kw: Internet-Draft
 cat: std
+stream: IETF
 
 coding: us-ascii
 pi:    # can use array (if all yes) or hash here
@@ -19,6 +20,10 @@ pi:    # can use array (if all yes) or hash here
 
 author:
 
+- ins: A. DeKok
+  name: Alan DeKok
+  org: InkBridge
+  email: aland@inkbridge.io
 
 - ins: M. Richardson
   name: Michael Richardson
@@ -34,13 +39,12 @@ informative:
 
 --- abstract
 
-This document describes a number of operational modes that a
-BRSKI Manufacturer Authorized Signing Authority (MASA) may take on.
+PKIX certificates have had "Extended Key Usage" extensions since before RFC5280.
+They are mis-understood and mis-used.
 
-Each mode is defined, and then each mode is given a relevance
-within an over applicability of what kind of organization the
-MASA is deployed into.  This document does not change any
-protocol mechanisms.
+This document makes the current EKU extension historic, replacing it with two new extensions: one for certification authorities (giving permission), and a second one for end-entity certificates giving authorization.
+
+
 
 --- middle
 
